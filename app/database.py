@@ -13,7 +13,7 @@ load_dotenv()
 
 
 # MongoDB URI with password correctly encoded
-URI = os.environ['MONGO_URI']
+URI = os.getenv('MONGO_URI')
 client = motor.motor_asyncio.AsyncIOMotorClient(URI)
 
 # Initialize MongoDB client and database

@@ -11,10 +11,6 @@ class Student(BaseModel):
     age: int
     address: Address
     
-class StudentFilter(BaseModel):
-    name:str
-    age:int
-    
     
 class UpdateStudent(BaseModel):
     name: Optional[str] = None
@@ -22,5 +18,3 @@ class UpdateStudent(BaseModel):
     address: Optional[Address] = None
     
     
-class StudentListResponse(BaseModel):
-    data: List[StudentFilter]

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from app.database import check_connection  # Import db from app.database
+from app.database import check_connection  
 from app.routes import router
 from contextlib import asynccontextmanager
 
@@ -20,5 +20,4 @@ app.include_router(
 
 
 if __name__ == "__main__":
-    # Run the app with Uvicorn directly when the script is executed
-    uvicorn.run(app, host="127.0.0.1", port=8000, )
+    uvicorn.run(app, host="0.0.0.0", port=8000)
